@@ -22,7 +22,7 @@ Following example demonstrates creating a new Zimbra account using zimbra-client
 ### Example 1: Creating a new account ###
 
     zimbra = require("zimbra-client");
-    zimbra.getAuthToken("localhost", "admin", "test123",
+    zimbra.getAdminAuthToken("localhost", "admin", "test123",
         function(err, authToken) {
             if(err != null) {
                 console.log(err.message);
