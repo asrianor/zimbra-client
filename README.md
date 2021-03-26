@@ -27,7 +27,7 @@ Following example demonstrates creating a new Zimbra account using zimbra-client
             if(err != null) {
                 console.log(err.message);
             }
-            zimbra.createAccount("localhost",{sn:"Solovyev",givenName:"Greg",displayName:"Greg Solovyev",password:"test123",name:"greg4@gregs-mbp.local"},authToken,
+            zimbra.createAccount("localhost",{ name: "greg4@gregs-mbp.local", password: "MyPassword123#", a: [ { "@": { n: "displayName", }, "#": "Greg Solovyev" }, { "@": { n: "givenName", }, "#": "Greg" }, { "@": { n: "sn", }, "#": "Solovyev" }, ] },authToken,
                 function(err1,accountObj) {
                     if(err1 != null) {
                         if(err1.code == "account.ACCOUNT_EXISTS") {
